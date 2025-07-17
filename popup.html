@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FluentFoxify</title>
+  <style>
+    body {
+      width: 320px;
+      min-height: 200px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+    button {
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3367d6;
+    }
+    .result {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border-radius: 4px;
+      white-space: pre-wrap;
+    }
+    .loading {
+      text-align: center;
+      margin: 10px 0;
+    }
+    .error {
+      color: #d93025;
+      margin-top: 10px;
+    }
+    .settings-link {
+      text-align: right;
+      margin-top: 10px;
+      font-size: 12px;
+    }
+    .copy-btn {
+      background-color: #0f9d58;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div id="apiKeyContainer" style="display: block;">
+    <h3>Set OpenAI API Key</h3>
+    <div class="container">
+      <input type="password" id="apiKey" placeholder="Enter your OpenAI API Key">
+      <button id="saveApiKey">Save</button>
+      <div id="apiKeyStatus"></div>
+    </div>
+  </div>
+
+  <div id="refineContainer" style="display: none;">
+    <h3>Enhance English Sentences</h3>
+    <div class="container">
+      <textarea id="inputText" placeholder="Enter the English sentence to enhance"></textarea>
+      <button id="refineButton">Enhance</button>
+      <div id="loadingIndicator" class="loading" style="display: none;">Processing...</div>
+      <div id="resultContainer" style="display: none;">
+        <div id="result" class="result"></div>
+        <button id="copyButton" class="copy-btn">Copy to Clipboard</button>
+      </div>
+      <div id="error" class="error" style="display: none;"></div>
+      <div class="settings-link">
+        <a href="#" id="showSettings">Settings</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
