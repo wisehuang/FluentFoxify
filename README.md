@@ -70,7 +70,6 @@ FluentFoxify/
 ├── LICENSE
 ├── README.md
 ├── background.js
-├── fluentfoxify-firefox.xpi
 ├── icons/
 │   ├── icon128.png
 │   ├── icon16.png
