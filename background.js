@@ -15,7 +15,7 @@ browserAPI.runtime.onMessage.addListener((request, sender, sendResponse) => {
         'Authorization': `Bearer ${request.apiKey}`
       },
       body: JSON.stringify({
-        model: 'gpt-4',
+        model: 'gpt-5.2',
         messages: [
           {
             role: 'system',
