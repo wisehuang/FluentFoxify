@@ -1,25 +1,30 @@
 {
   "manifest_version": 2,
   "name": "FluentFoxify",
-  "version": "1.2",
+  "version": "1.3",
   "description": "Enhance your English sentences using ChatGPT API",
   "permissions": [
     "storage",
-    "https://api.openai.com/*",
-    "activeTab"
+    "contextMenus",
+    "clipboardWrite",
+    "https://api.openai.com/*"
   ],
   "browser_specific_settings": {
     "gecko": {
-      "strict_min_version": "109.0"
-    },
-    "data_collection_permissions": {
-      "opt_in": false,
-      "opt_out": false
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": ["websiteContent"]
+      }
     }
   },
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "scripts": ["shared.js", "background.js"],
+    "persistent": true
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
   },
   "browser_action": {
     "default_popup": "popup.html",
@@ -28,10 +33,5 @@
       "48": "icons/icon48.png",
       "128": "icons/icon128.png"
     }
-  },
-  "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
   }
 }

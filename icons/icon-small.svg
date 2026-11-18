@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- 16px variant: no margin, thicker F, larger sparkle -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1FD86B"/>
+      <stop offset="1" stop-color="#05A847"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+  <path fill="#FFFFFF" d="M24 28a8 8 0 0 1 8-8h56a8 8 0 0 1 8 8v8a8 8 0 0 1-8 8H48v12h20a8 8 0 0 1 8 8v4a8 8 0 0 1-8 8H48v24a8 8 0 0 1-8 8h-8a8 8 0 0 1-8-8z"/>
+  <path fill="#FFFFFF" d="M92 56Q92 92 128 92Q92 92 92 128Q92 92 56 92Q92 92 92 56Z" transform="translate(-4 -12)"/>
+</svg>
